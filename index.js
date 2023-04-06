@@ -47,10 +47,6 @@ client.on('messageCreate', msg => {
             msg.reply({ embeds: [embed] })
         }
 
-        if (!permissions.has('CONNECT') || !permissions.has('SPEAK')) {
-            return message.channel.send('I need the permissions to join and speak in your voice channel!');
-        }
-
         if(msg.content === process.env.PREFIX + 'server') {
             msg.channel.send(`현재 서버의 이름은 ${msg.guild.name} 입니다.\n총 멤버 수는 ${msg.guild.memberCount} 명 입니다.`)
           }
